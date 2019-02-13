@@ -179,7 +179,7 @@
 @endsection
 
 @section('after-scripts')
-   
+
     <script type="text/javascript">
 
 
@@ -191,6 +191,6 @@
         window.onload = function () {
             Backend.Users.windowloadhandler();
         };
-        
+
     </script>
 @endsection

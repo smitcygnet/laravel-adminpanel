@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app') 
+@extends ('backend.layouts.app')
 
 @section ('title', trans('labels.backend.settings.management') . ' | ' . trans('labels.backend.settings.edit'))
 
@@ -7,9 +7,9 @@
 	{{ trans('labels.backend.settings.management') }}
 	<small>{{ trans('labels.backend.settings.edit') }}</small>
 </h1>
-@endsection 
+@endsection
 
-@section('content') 
+@section('content')
 {{ Form::model($setting, ['route' => ['admin.settings.update', $setting], 'class' => 'form-horizontal',
 'role' => 'form', 'method' => 'PATCH','files' => true, 'id' => 'edit-settings']) }}
 
@@ -237,8 +237,8 @@
 
 <!-- hidden setting id variable -->
 <input type="hidden" data-id="{{ $setting->id }}" id="setting">
-{{ Form::close() }} 
-@endsection 
+{{ Form::close() }}
+@endsection
 
 @section('after-scripts')
 <script src='/js/backend/bootstrap-tabcollapse.js'></script>
@@ -247,16 +247,16 @@
 		Backend.Utils.csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		Backend.Settings.selectors.RouteURL = "{{ route('admin.removeIcon', -1) }}";
 		Backend.Settings.init();
-		
+
 	})();
 
 	window.load = function(){
-		
+
 	}
 	/*
 	var route = "{{ route('admin.removeIcon', -1) }}";
     var data_id = $('#setting').data('id');
-    
+
     route = route.replace('-1', data_id);
 
     $('.remove-logo').click(function() {
@@ -292,7 +292,7 @@
                 }
             });
     });
-	
+
    */
     $('#myTab').tabCollapse({
         tabsClass: 'hidden-sm hidden-xs',
