@@ -46,6 +46,18 @@ class StandardRepository extends BaseRepository
      */
     public function create(array $input)
     {
+        if ($this->query()->where('name', $input['name'])->first()) {
+            throw new GeneralException(trans('exceptions.backend.standards.already_exists'));
+        }
+
+         $validation = Validator::make($request->all(), [
+            'first_name'      => 'required|max:191',
+            'last_name'       => 'required|max:191',
+            'gender'          => 'required|max:191',
+            'hobbies'         => 'required',
+            'standard'        => 'required',
+            'profile_picture' => 'required',
+        ]);
 
         !isset($input['status']) ? $input['status'] = 0 : $input['status'] = 1;
         if (Standard::create($input)) {

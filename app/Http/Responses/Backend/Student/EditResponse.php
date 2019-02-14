@@ -3,6 +3,7 @@
 namespace App\Http\Responses\Backend\Student;
 
 use Illuminate\Contracts\Support\Responsable;
+use App\Models\Standard\Standard;
 
 class EditResponse implements Responsable
 {
@@ -28,8 +29,14 @@ class EditResponse implements Responsable
      */
     public function toResponse($request)
     {
+        $standards = [];
+        $standards = Standard::where('status', 1)->get()->all();
+        foreach ($standards as $standard) {
+            $data[$standard->id] = $standard->name;
+        }
         return view('backend.students.edit')->with([
-            'student' => $this->students
+            'student'   => $this->students,
+            'standards' => $data
         ]);
     }
 }

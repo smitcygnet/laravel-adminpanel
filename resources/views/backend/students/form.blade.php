@@ -16,12 +16,17 @@
         <div class="col-lg-10">
             <div>
             <label for="male" class="control control--radio">
-            <input type="radio" value="male" name="gender" id="male" class="get-role-for-permissions"/> Male
+            <input type="radio" value="male" name="gender" id="male" class="get-role-for-permissions"
+            {{ @$student->gender == 'male' ? 'checked' : ''  }}
+            /> Male
             <div class="control__indicator"></div>
 
             </label>
             <label for="female" class="control control--radio">
-            <input type="radio" value="female" name="gender" id="female" class="get-role-for-permissions"/>  Female
+            <input type="radio" value="female" name="gender" id="female" class="get-role-for-permissions"
+            {{ @$student->gender == 'female' ? 'checked' : ''  }}
+
+            />  Female
             <div class="control__indicator"></div>
 
             </label>
@@ -40,6 +45,27 @@
 
  <div class="form-group">
         {{ Form::label('profile_picture', trans('labels.backend.students.profile_picture'), ['class' => 'col-lg-2 control-label required']) }}
+
+        @if(!empty($student->profile_picture))
+            <div class="col-lg-1">
+                <img src="<?php echo Storage::url('img/students/'.$student->profile_picture); ?>" height="80" width="80">
+            </div>
+            <div class="col-lg-5">
+                <div class="custom-file-input">
+                    <input type="file" name="profile_picture" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" />
+                    <label for="file-1"><i class="fa fa-upload"></i><span>Choose a file</span></label>
+                </div>
+            </div>
+        @else
+            <div class="col-lg-5">
+                <div class="custom-file-input">
+                        <input type="file" name="profile_picture" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" />
+                        <label for="file-1"><i class="fa fa-upload"></i><span>Choose a file</span></label>
+                </div>
+            </div>
+        @endif
+
+        <?php /*
         <div class="col-lg-10">
             <div class="custom-file-input">
                 {!! Form::file('profile_picture', array('class'=>'form-control inputfile inputfile-1' )) !!}
@@ -49,8 +75,9 @@
                 </label>
             </div>
         </div><!--col-lg-10-->
+        */ ?>
  </div><!--form-group-->
- <?php /*
+
  <div class="form-group">
         {{ Form::label('standard', trans('labels.backend.students.standard'), ['class' => 'col-lg-2 control-label required']) }}
         <div class="col-lg-10">
@@ -60,7 +87,7 @@
         </div><!--col-lg-10-->
  </div><!--form-group-->
 
- */ ?>
+
 </div><!--box-body-->
 
 @section("after-scripts")

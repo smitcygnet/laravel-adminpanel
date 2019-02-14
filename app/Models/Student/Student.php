@@ -31,7 +31,14 @@ class Student extends Model
      * @var array
      */
     protected $fillable = [
-
+        'first_name',
+        'last_name',
+        'gender',
+        'hobbies',
+        'profile_picture',
+        'standard',
+        'created_at',
+        'updated_at'
     ];
 
     /**

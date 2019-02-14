@@ -34,8 +34,12 @@
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
-                            <th></th>
-                            <th></th>
+                           <th></th>
+                           <th>
+                                {!! Form::text('first_name', null, ["class" => "search-input-text form-control", "data-column" => 1, "placeholder" => trans('labels.backend.students.table.first_name')]) !!}
+                                <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                            </th>
+
                             <th></th>
                             <th></th>
                             <th></th>
@@ -67,7 +71,6 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.students.table')}}.id'},
-
                     {data: 'first_name', name: '{{config('module.students.table')}}.first_name'},
                     {data: 'last_name', name: '{{config('module.students.table')}}.last_name'},
                     {data: 'gender', name: '{{config('module.students.table')}}.gender'},
@@ -90,7 +93,6 @@
                     ]
                 }
             });
-
             Backend.DataTableSearch.init(dataTable);
         });
     </script>

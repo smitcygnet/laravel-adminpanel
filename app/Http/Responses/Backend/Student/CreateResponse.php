@@ -3,6 +3,7 @@
 namespace App\Http\Responses\Backend\Student;
 
 use Illuminate\Contracts\Support\Responsable;
+use App\Models\Standard\Standard;
 
 class CreateResponse implements Responsable
 {
@@ -15,6 +16,13 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
-        return view('backend.students.create');
+        $standards = [];
+        $standards = Standard::where('status', 1)->get()->all();
+        foreach ($standards as $standard) {
+            $data[$standard->id] = $standard->name;
+        }
+        return view('backend.students.create')->with([
+            'standards' => $data
+        ]);
     }
 }

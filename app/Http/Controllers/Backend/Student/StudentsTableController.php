@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 use App\Repositories\Backend\Student\StudentRepository;
+use App\Models\Standard\Standard;
 use App\Http\Requests\Backend\Student\ManageStudentRequest;
 
 /**
@@ -38,6 +39,9 @@ class StudentsTableController extends Controller
     {
         return Datatables::of($this->student->getForDataTable())
             ->escapeColumns(['id'])
+            ->addColumn('standard', function ($student) {
+                return Standard::where('id', $student->standard)->first()->name;
+            })
             ->addColumn('created_at', function ($student) {
                 return Carbon::parse($student->created_at)->toDateString();
             })
