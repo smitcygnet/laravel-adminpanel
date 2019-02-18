@@ -275,6 +275,9 @@ return [
 		],
 	],
 	"frontend" => [
+	"blogs" => [
+		"view" => "Blog View Page",
+	],
 	"auth" => [
 	"login_box_title" => "Login",
 	"login_button" => "Login",
@@ -283,6 +286,7 @@ return [
 	"register_button" => "Register",
 	"remember_me" => "Remember Me",
 	],
+
 	"passwords" => [
 	"forgot_password" => "Forgot Your Password?",
 	"reset_password_box_title" => "Reset Password",

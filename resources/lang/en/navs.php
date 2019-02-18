@@ -19,6 +19,7 @@ return [
     ],
 
     'frontend' => [
+        'blogs'     => 'Blogs',
         'dashboard' => 'Dashboard',
         'login'     => 'Login',
         'macros'    => 'Macros',
