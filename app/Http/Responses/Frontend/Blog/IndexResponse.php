@@ -3,6 +3,8 @@
 namespace App\Http\Responses\Frontend\Blog;
 
 use Illuminate\Contracts\Support\Responsable;
+use App\Models\BlogCategories\BlogCategory;
+use App\Models\BlogTags\BlogTag;
 use App\Models\Blogs\Blog;
 use DB;
 class IndexResponse implements Responsable
@@ -12,21 +14,19 @@ class IndexResponse implements Responsable
     	$blogs = Blog::all();
     	$search = $request->input('search');
     	if($search){
-    		$catids = DB::table('blog_categories')
-                ->select('blog_categories.id as categoryids')
-                ->where('blog_categories.name', 'LIKE', '%' . $search . '%')
-                ->get(['categoryids'])->toArray();
-
             $catidsArr = $tagidsArr = [];
+
+            $catids =  BlogCategory::select('blog_categories.id as categoryids')
+             ->where('blog_categories.name', 'LIKE', '%' . $search . '%')
+             ->get()->toArray();
 
             if($catids) {
                 $catidsArr  = array_column($catids, 'categoryids');
             }
 
-            $tagids = DB::table('blog_tags')
-                ->select('blog_tags.id as tagids')
-                ->where('blog_tags.name', 'LIKE', '%' . $search . '%')
-                ->get(['tagids'])->toArray();
+             $tagids =  BlogTag::select('blog_tags.id as tagids')
+             ->where('blog_tags.name', 'LIKE', '%' . $search . '%')
+             ->get()->toArray();
 
             if($tagids) {
                 $tagidsArr  = array_column($tagids, 'tagids');
@@ -42,6 +42,7 @@ class IndexResponse implements Responsable
                 ->groupBy('blogs.id')
                 ->get();
     	}
+
         return view('frontend.blogs.index')->with([
             'blogs'=> $blogs,
         ]);

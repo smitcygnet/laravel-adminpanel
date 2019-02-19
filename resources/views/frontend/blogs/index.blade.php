@@ -1,38 +1,18 @@
 @extends('frontend.layouts.frontend')
 @section('content')
     <div class="row">
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <form action="" id='blogSearchForm'>
-                      <input type="textbox" name="search">
-                      <input type="Button"
-                        onclick="document.getElementById('blogSearchForm').submit();"
-                       id='blogSearch' value="Search">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<div class="col-12 col-lg-8">
-
-
-    <?php foreach ($blogs as $blog) {
-        $blogCategories = $blogTags = [];
-      foreach($blog->categories as $blogCat){
-                $blogCategories[] = $blogCat->name;
-            }
-    foreach($blog->tags as $blogtag){
-                $blogTags[] = $blogtag->name;
-            }
-        $blogCat = count($blogCategories) > 0 ? implode(', ', $blogCategories) : '';
-        $blogTag = count($blogTags) > 0 ? implode(',', $blogTags) : '';
-
-                                ?>
+        <div class="col-12 col-lg-8">
+            <?php foreach ($blogs as $blog) {
+                        $blogCategories = $blogTags = [];
+                        foreach($blog->categories as $blogCat){
+                            $blogCategories[] = $blogCat->name;
+                        }
+                        foreach($blog->tags as $blogtag){
+                         $blogTags[] = $blogtag->name;
+                        }
+                        $blogCat = count($blogCategories) > 0 ? implode(', ', $blogCategories) : '';
+                        $blogTag = count($blogTags) > 0 ? implode(',', $blogTags) : '';
+            ?>
                     <div class="news-content">
                         <a href="#"><img src="images/1.jpg" alt=""></a>
                         <header class="entry-header d-flex flex-wrap justify-content-between align-items-center">
@@ -45,24 +25,18 @@
                                     <span class="post-comments"><a href="#">3 Comments</a></span>
                                 </div>
                             </div>
-                            <div class="donate-icon">
-                                <!-- <a href="#"><img src="images/donate-icon.png" alt=""></a> -->
-                            </div>
                         </header>
-
                         <div class="entry-content">
                             <p> <b> Categories :</b> {{$blogCat}} </p>
-                                                <p> <b> Tags : </b>{{$blogTag}} </p>
-                                                <h4>{{ $blog->content }} </h4>
-                                                <p> User : {{ $blog->created_by }}| Date : {{ $blog->created_at->format('d/m/Y h:i A') }}</p>
+                            <p> <b> Tags : </b>{{$blogTag}} </p>
+                            <h4>{{ $blog->content }} </h4>
+                            <p> User : {{ $blog->created_by }}| Date : {{ $blog->created_at->format('d/m/Y h:i A') }}</p>
                         </div>
-
                         <footer class="entry-footer">
-                            <a href="#" class="btn gradient-bg">Read More</a>
+                            <a href="blogs/{{ $blog->id }}" class="btn gradient-bg">Read More</a>
                         </footer>
                     </div>
-<?php } ?>
-
+                    <?php } ?>
                     <ul class="pagination d-flex flex-wrap align-items-center p-0">
                         <li class="active"><a href="#">01</a></li>
                         <li><a href="#">02</a></li>
@@ -73,9 +47,10 @@
                 <div class="col-12 col-lg-4">
                     <div class="sidebar">
                         <div class="search-widget">
-                            <form class="flex flex-wrap align-items-center">
-                                <input type="search" placeholder="Search...">
-                                <button type="submit" class="flex justify-content-center align-items-center">GO</button>
+                        <form action="" class="flex flex-wrap align-items-center" id='blogSearchForm'>
+                                <input type="search"  name="search" placeholder="Search...">
+                                <button type="submit" class="flex justify-content-center align-items-center" onclick="document.getElementById('blogSearchForm').submit();"
+                       id='blogSearch'>GO</button>
                             </form><!-- .flex -->
                         </div><!-- .search-widget -->
 
@@ -167,5 +142,8 @@
                     </div><!-- .sidebar -->
                 </div><!-- .col -->
 </div><!-- row -->
+    </div>
+
+
 
 @endsection
