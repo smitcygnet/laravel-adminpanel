@@ -19,3 +19,5 @@ require __DIR__.'/LogViewer.php';
 
 require __DIR__.'/Standard.php';
 require __DIR__.'/Student.php';
+require __DIR__.'/Comment.php';
+require __DIR__.'/Test.php';

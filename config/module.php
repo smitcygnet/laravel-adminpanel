@@ -26,4 +26,10 @@ return [
 	"students" => [
 	"table" => "students",
 	],
+	"comments" => [
+	"table" => "comments",
+	],
+	"tests" => [
+	"table" => "test",
+	],
 ];

@@ -1,0 +1,7 @@
+fieldname,datatype,input_type
+id,integer,textbox
+first_name,varchar,radio
+last_name,varchar,textbox
+age,varchar,textbox
+comment,text,textarea
+published_date,datetime,

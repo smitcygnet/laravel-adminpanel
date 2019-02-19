@@ -65,7 +65,7 @@ class StudentRepository extends BaseRepository
      */
     public function create(array $input)
     {
-     if (!empty($input['profile_picture'])) {
+      if (!empty($input['profile_picture'])) {
          $input['profile_picture'] = $this->uploadProfileImg($input['profile_picture']);
       }
 
@@ -80,7 +80,6 @@ class StudentRepository extends BaseRepository
      */
     public function uploadProfileImg($profileImage)
     {
-
         $path = $this->student_profile_path;
         $image_name = time().$profileImage->getClientOriginalName();
         $this->storage->put($path.$image_name, file_get_contents($profileImage->getRealPath()));

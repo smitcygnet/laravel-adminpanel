@@ -122,6 +122,20 @@ return [
 	"management" => "Student Management",
 	"main" => "Students",
 	],
+	"comments" => [
+	"all" => "All Comments",
+	"create" => "Create Comment",
+	"edit" => "Edit Comment",
+	"management" => "Comment Management",
+	"main" => "Comments",
+	],
+	"tests" => [
+	"all" => "All Tests",
+	"create" => "Create Test",
+	"edit" => "Edit Test",
+	"management" => "Test Management",
+	"main" => "Tests",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",
