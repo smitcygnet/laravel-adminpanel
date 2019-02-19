@@ -11,16 +11,20 @@ class ShowResponse implements Responsable
 {
 
    protected $blog;
+   protected $search;
 
-   public function __construct($blog)
+   public function __construct($blog,$search)
     {
         $this->blog = $blog;
+        $this->search = $search;
     }
+
     public function toResponse($request)
     {
     	$blogs = Blog::where('id', $this->blog)->get();
-        return view('frontend.blogs.index')->with([
+        return view('frontend.blogs.show')->with([
             'blogs'=> $blogs,
+            'search' => $this->search,
         ]);
     }
 }

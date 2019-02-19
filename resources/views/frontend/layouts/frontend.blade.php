@@ -45,8 +45,6 @@
         ?>
 </head>
 <body class="single-page news-page" id="app-layout">
-
-
   <header class="site-header">
         <div class="top-header-bar">
             <div class="container">
@@ -69,13 +67,9 @@
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .top-header-bar -->
-
         @include('includes.partials.logged-in-as')
         @include('frontend.includes.thecharitynav')
-
-
     </header><!-- .site-header -->
-
     <div class="page-header">
         <div class="container">
             <div class="row">
