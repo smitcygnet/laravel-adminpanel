@@ -20,7 +20,6 @@
             {{ @$student->gender == 'male' ? 'checked' : ''  }}
             /> Male
             <div class="control__indicator"></div>
-
             </label>
             <label for="female" class="control control--radio">
             <input type="radio" value="female" name="gender" id="female" class="get-role-for-permissions"
@@ -38,12 +37,16 @@
 <div class="form-group">
         {{ Form::label('hobbies', trans('labels.backend.students.hobbies'), ['class' => 'col-lg-2 control-label required']) }}
         <div class="col-lg-10">
-            {{ Form::textarea('hobbies', null,['class' => 'form-control', 'placeholder' => trans('labels.backend.students.hobbies'),
-            'required' => 'required','rows' => 2]) }}
+            {{ Form::textarea('hobbies', null,
+            [ 'class'       => 'form-control',
+              'placeholder' => trans('labels.backend.students.hobbies'),
+              'required'    => 'required',
+              'rows' => 2
+              ]) }}
         </div><!--col-lg-10-->
     </div><!--form-group-->
 
- <div class="form-group">
+<div class="form-group">
         {{ Form::label('profile_picture', trans('labels.backend.students.profile_picture'), ['class' => 'col-lg-2 control-label required']) }}
 
         @if(!empty($student->profile_picture))

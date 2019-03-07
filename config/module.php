@@ -30,6 +30,90 @@ return [
 	"table" => "comments",
 	],
 	"tests" => [
-	"table" => "test",
+	"table" => "tests",
+	],
+	"referencemodules" => [
+	"table" => "referencemodules",
+	],
+	"customers" => [
+	"table" => "customers",
+	],
+	"schools" => [
+	"table" => "schools",
+	],
+	"newschools" => [
+	"table" => "newschools",
+	],
+	"newnews" => [
+	"table" => "newnews",
+	],
+	"newsnews" => [
+	"table" => "newsnews",
+	],
+	"smtnews" => [
+	"table" => "smtnew",
+	],
+	"smittests" => [
+	"table" => "smittest",
+	],
+	"newcustomers" => [
+	"table" => "newcustomers",
+	],
+	"teachers" => [
+	"table" => "teachers",
+	],
+	"testmodules" => [
+	"table" => "testmodules",
+	],
+	"barbers" => [
+	"table" => "barbers",
+	],
+	"testmodulenews" => [
+	"table" => "testmodulenews",
+	],
+	"smitendras" => [
+	"table" => "smitendras",
+	],
+	"tempmodules" => [
+	"table" => "tempmodules",
+	],
+	"customnews" => [
+	"table" => "customnews",
+	],
+	"samples" => [
+	"table" => "samples",
+	],
+	"samplenews" => [
+	"table" => "samplenews",
+	],
+	"sampleones" => [
+	"table" => "sampleones",
+	],
+	"sampletwos" => [
+	"table" => "sampletwos",
+	],
+	"samplethrees" => [
+	"table" => "samplethrees",
+	],
+	"samplefours" => [
+	"table" => "samplefours",
+	],
+	"employeeones" => [
+	"table" => "employeeones",
+	],
+	"employeetwos" => [
+	"table" => "employeetwos",
+	],
+	"testmones" => [
+	"table" => "testmones",
+	],
+	"testmtwos" => [
+	"table" => "testmtwos",
+	],
+	"testmthrees" => [
+	"table" => "testmthrees",
+	],
+	"testmfours" => [
+	"table" => "testmfours",
 	],
 ];

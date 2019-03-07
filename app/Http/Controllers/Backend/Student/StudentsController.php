@@ -64,6 +64,7 @@ class StudentsController extends Controller
      */
     public function store(StoreStudentRequest $request)
     {
+
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method
@@ -80,7 +81,7 @@ class StudentsController extends Controller
      */
     public function edit(Student $student, EditStudentRequest $request)
     {
-        return new EditResponse($student);
+       return new EditResponse($student);
     }
     /**
      * Update the specified resource in storage.
@@ -91,6 +92,7 @@ class StudentsController extends Controller
      */
     public function update(UpdateStudentRequest $request, Student $student)
     {
+        echo "<pre/>";print_r($request->all());exit;
         //Input received from the request
         $input = $request->except(['_token']);
         //Update the model using repository update method

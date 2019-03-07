@@ -33,7 +33,6 @@ class StudentRepository extends BaseRepository
         $this->storage = Storage::disk('public');
     }
 
-
     /**
      * This method is used by Table Controller
      * For getting the table data to show in
@@ -75,7 +74,7 @@ class StudentRepository extends BaseRepository
        throw new GeneralException(trans('exceptions.backend.students.create_error'));
     }
 
-/*
+    /*
      * Upload logo image
      */
     public function uploadProfileImg($profileImage)
@@ -96,7 +95,7 @@ class StudentRepository extends BaseRepository
      */
     public function update(Student $student, array $input)
     {
-         if (!empty($input['profile_picture'])) {
+        if (!empty($input['profile_picture'])) {
             $this->removeProfilePicture($student, 'profile_picture');
             $input['profile_picture'] = $this->uploadProfileImg($input['profile_picture']);
         }

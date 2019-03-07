@@ -97,7 +97,6 @@
         </div><!--col-lg-10-->
     </div><!--form control-->
 
-
     <div class="form-group">
         {{ Form::label('meta_keywords', trans('validation.attributes.backend.blogs.meta_keyword'), ['class' => 'col-lg-2 control-label']) }}
 
@@ -125,10 +124,8 @@
 
 @section("after-scripts")
     <script type="text/javascript">
-
         Backend.Blog.selectors.GenerateSlugUrl = "{{route('admin.generate.slug')}}";
         Backend.Blog.selectors.SlugUrl = "{{url('/')}}";
         Backend.Blog.init('{{ config('locale.languages.' . app()->getLocale())[1] }}');
-
     </script>
 @endsection
