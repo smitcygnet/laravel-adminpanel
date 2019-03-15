@@ -74,9 +74,9 @@ class StudentRepository extends BaseRepository
        throw new GeneralException(trans('exceptions.backend.students.create_error'));
     }
 
-    /*
-     * Upload logo image
-     */
+   /*
+    * Upload logo image
+    */
     public function uploadProfileImg($profileImage)
     {
         $path = $this->student_profile_path;
@@ -129,11 +129,9 @@ class StudentRepository extends BaseRepository
         $path = $this->student_profile_path;
         $this->storage->delete($path.$student->$type);
         $result = $student->update([$type => null]);
-
         if ($result) {
             return true;
         }
-
         throw new GeneralException(trans('exceptions.backend.settings.update_error'));
     }
 }

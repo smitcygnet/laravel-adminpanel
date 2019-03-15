@@ -93,7 +93,7 @@ return [
 	"table" => "sampletwos",
 	],
 	"samplethrees" => [
-	"table" => "samplethrees",
+	"table" => "samples",
 	],
 	"samplefours" => [
 	"table" => "samplefours",
@@ -115,5 +115,32 @@ return [
 	],
 	"testmfours" => [
 	"table" => "testmfours",
+	],
+	"tempones" => [
+	"table" => "tempones",
+	],
+	"temptwos" => [
+	"table" => "temptwos",
+	],
+	"visions" => [
+	"table" => "visions",
+	],
+	"lives" => [
+	"table" => "lives",
+	],
+	"samplefives" => [
+	"table" => "samplefives",
+	],
+	"samplesixes" => [
+	"table" => "samplesixs",
+	],
+	"samplesevens" => [
+	"table" => "samplesevens",
+	],
+	"sampletemps" => [
+	"table" => "sampletemps",
+	],
+	"samplesevennews" => [
+	"table" => "samplesevennews",
 	],
 ];

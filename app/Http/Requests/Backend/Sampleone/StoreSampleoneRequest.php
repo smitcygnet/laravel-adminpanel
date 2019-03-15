@@ -25,15 +25,6 @@ class StoreSampleoneRequest extends FormRequest
     {
         return [
         'first_name' => 'required|max:191',
-			'last_name' => 'max:191',
-			'age' => 'required|max:191',
-			'comment' => 'max:191',
-			'dropdown' => 'required|max:191',
-			'explaination' => 'required|max:191',
-			'gender' => 'required|max:191',
-			'associated_roles' => 'required|max:191',
-			'dataone' => 'max:191',
-			'datetwo' => 'required|max:191',
 			'datethree' => 'max:191',
             //Put your rules for the request in here
             //For Example : 'title' => 'required'

@@ -214,5 +214,50 @@ return [
 	"deleted" => "The Testmfour was successfully deleted.",
 	"updated" => "The Testmfour was successfully updated.",
 	],
+	"tempones" => [
+	"created" => "The Tempone was successfully created.",
+	"deleted" => "The Tempone was successfully deleted.",
+	"updated" => "The Tempone was successfully updated.",
+	],
+	"temptwos" => [
+	"created" => "The Temptwo was successfully created.",
+	"deleted" => "The Temptwo was successfully deleted.",
+	"updated" => "The Temptwo was successfully updated.",
+	],
+	"visions" => [
+	"created" => "The Vision was successfully created.",
+	"deleted" => "The Vision was successfully deleted.",
+	"updated" => "The Vision was successfully updated.",
+	],
+	"lives" => [
+	"created" => "The Life was successfully created.",
+	"deleted" => "The Life was successfully deleted.",
+	"updated" => "The Life was successfully updated.",
+	],
+	"samplefives" => [
+	"created" => "The Samplefive was successfully created.",
+	"deleted" => "The Samplefive was successfully deleted.",
+	"updated" => "The Samplefive was successfully updated.",
+	],
+	"samplesixes" => [
+	"created" => "The Samplesix was successfully created.",
+	"deleted" => "The Samplesix was successfully deleted.",
+	"updated" => "The Samplesix was successfully updated.",
+	],
+	"samplesevens" => [
+	"created" => "The Sampleseven was successfully created.",
+	"deleted" => "The Sampleseven was successfully deleted.",
+	"updated" => "The Sampleseven was successfully updated.",
+	],
+	"sampletemps" => [
+	"created" => "The Sampletemp was successfully created.",
+	"deleted" => "The Sampletemp was successfully deleted.",
+	"updated" => "The Sampletemp was successfully updated.",
+	],
+	"samplesevennews" => [
+	"created" => "The Samplesevennew was successfully created.",
+	"deleted" => "The Samplesevennew was successfully deleted.",
+	"updated" => "The Samplesevennew was successfully updated.",
+	],
 	],
 ];
