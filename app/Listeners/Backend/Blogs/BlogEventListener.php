@@ -12,7 +12,7 @@ class BlogEventListener
      */
     private $history_slug = 'Blog';
 
-    /**
+   /**
      * @param $event
      */
     public function onCreated($event)

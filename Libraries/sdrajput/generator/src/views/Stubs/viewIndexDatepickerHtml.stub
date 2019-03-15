@@ -1,5 +1,0 @@
-			@if(!empty($DummySingularTable->DummyFieldName))
-			    {{ Form::text('DummyLowerVal', \Carbon\Carbon::parse($DummySingularTable->DummyFieldName)->format('m/d/Y h:i a'), ['class' => 'form-control datetimepicker1 box-size', 'placeholder' => DummyPlaceholder, DummyRequired 'id' => 'DummyFieldName']) }}
-			@else
-			    {{ Form::text('DummyLowerVal', null, ['class' => 'form-control DummyFieldName box-size', 'placeholder' => DummyPlaceholder, DummyRequired 'id' => 'DummyFieldName']) }}
-			@endif
