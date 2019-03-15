@@ -12,13 +12,13 @@ class CreateResponse implements Responsable
     protected $types;
 
     /**
-     * @var \Bvipul\Generator\Module
+     * @var Libraries\Sdrajput\Generator\Module
      */
     protected $modules;
 
     /**
-     * @param array                    $types
-     * @param \Bvipul\Generator\Module $modules
+     * @param array                               $types
+     * @param Libraries\Sdrajput\Generator\Module $modules
      */
     public function __construct($types, $modules)
     {

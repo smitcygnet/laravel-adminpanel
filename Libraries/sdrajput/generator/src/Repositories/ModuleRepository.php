@@ -1,8 +1,8 @@
 <?php
 
-namespace Bvipul\Generator\Repositories;
+namespace Sdrajput\Generator\Repositories;
 
-use Bvipul\Generator\Module;
+use Sdrajput\Generator\Module;
 use App\Exceptions\GeneralException;
 use App\Repositories\BaseRepository;
 use App\Models\Access\Permission\Permission;

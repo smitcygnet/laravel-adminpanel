@@ -1,16 +1,16 @@
 <?php
 
-namespace Bvipul\Generator\Controllers;
+namespace Sdrajput\Generator\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Access\Permission\Permission;
-use Bvipul\Generator\Repositories\ModuleRepository;
+use Libraries\Sdrajput\Generator\Repositories\ModuleRepository;
 
 /**
  * Class ModuleController.
  *
- * @author Vipul Basapati <basapativipulkumar@gmail.com | https://github.com/bvipul>
+ * @author
  */
 class ModuleController extends Controller
 {
@@ -65,6 +65,9 @@ class ModuleController extends Controller
      */
     public function store(Request $request)
     {
+
+        echo "tes"; exit;
+
      // Upload DB csv file for the Module
         $collections = $this->repository->uploadCsvToGetDbData($request->all());
 

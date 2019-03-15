@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvipul\Generator\Controllers;
+namespace Sdrajput\Generator\Controllers;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Artisan;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
 /**
  * Class Generator.
  *
- * @author Vipul Basapati <basapativipulkumar@gmail.com | https://github.com/bvipul>
+ * @author
  */
 class Generator
 {
