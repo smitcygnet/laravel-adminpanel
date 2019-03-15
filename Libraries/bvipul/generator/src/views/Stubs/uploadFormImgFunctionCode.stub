@@ -1,0 +1,7 @@
+public function uploadFormImg($image,$field_path)
+    {
+        echo $path = $this->$field_path;
+        $image_name = time().$image->getClientOriginalName();
+        $this->storage->put($path.$image_name, file_get_contents($image->getRealPath()));
+        return $image_name;
+    }

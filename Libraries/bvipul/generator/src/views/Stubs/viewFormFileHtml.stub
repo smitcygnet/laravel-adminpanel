@@ -1,0 +1,18 @@
+		@if(!empty($DummyModuleName->DummyFieldName))
+			<div class='col-lg-1'>
+				<img src='<?php echo Storage::url('img/DummyTable/'.$DummyModuleName->DummyFieldName); ?>' height='80' width='80'>
+			</div>
+		<div class='col-lg-5'>
+			<div class='custom-file-input'>
+				<input type='file' name='DummyFieldName' id='file-DummyFieldName' class='inputfile inputfile-DummyFieldName' data-multiple-caption='{count} files selected' />
+			<label for='file-DummyFieldName'><i class='fa fa-upload'></i><span>Choose a file</span></label>
+			</div>
+		</div>
+		@else
+		<div class='col-lg-5'>
+			<div class='custom-file-input'>
+				<input type='file' name='DummyFieldName' id='file-DummyFieldName' class='inputfile inputfile-DummyFieldName' data-multiple-caption='{count} files selected' />
+			<label for='file-DummyFieldName'><i class='fa fa-upload'></i><span>Choose a file</span></label>
+			</div>
+		</div>
+		@endif
