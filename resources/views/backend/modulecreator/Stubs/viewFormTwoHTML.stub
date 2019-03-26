@@ -1,0 +1,1 @@
+		{{ Form::label('DummyFNLC', trans('labels.backend.DummyModulel.DummyFNLC'), ['class' => 'col-lg-2 control-label DummyLabelRequired']) }}

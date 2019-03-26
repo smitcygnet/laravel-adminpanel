@@ -54,7 +54,7 @@ return [
 	"main" => "Pages",
 	],
 	"blogs" => [
-	"all" => "All Blog",
+	"all" => "All Blogs",
 	"create" => "Create Blog",
 	"edit" => "Edit Blog",
 	"management" => "Blog Management",
@@ -107,6 +107,7 @@ return [
 	"create" => "Create Module Page",
 	"management" => "Module Management",
 	"main" => "Module Pages",
+	"install" => "Install Modules",
 	],
 	"standards" => [
 	"all" => "All Standards",

@@ -25,7 +25,6 @@ class StoreSampleoneRequest extends FormRequest
     {
         return [
         'first_name' => 'required|max:191',
-			'datethree' => 'max:191',
             //Put your rules for the request in here
             //For Example : 'title' => 'required'
             //Further, see the documentation : https://laravel.com/docs/5.4/validation#creating-form-requests

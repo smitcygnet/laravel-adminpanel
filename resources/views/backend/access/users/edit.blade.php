@@ -173,6 +173,5 @@
         window.onload = function () {
             Backend.Users.windowloadhandler();
         };
-
-    </script>
+   </script>
 @endsection

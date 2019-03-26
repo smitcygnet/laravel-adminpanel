@@ -8,6 +8,7 @@ use App\Models\Sampleone\Sampleone;
 use App\Exceptions\GeneralException;
 use App\Repositories\BaseRepository;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class SampleoneRepository.
@@ -21,18 +22,14 @@ class SampleoneRepository extends BaseRepository
 
     protected $storage;
 
-    protected $profile_pic_path;
 
-    protected $profile_img_path;
 
     /**
      * Constructor.
      */
     public function __construct()
     {
-     	$this->profile_pic_path = 'img'.DIRECTORY_SEPARATOR.'sampleones'.DIRECTORY_SEPARATOR;
 
-		$this->profile_img_path = 'img'.DIRECTORY_SEPARATOR.'sampleones'.DIRECTORY_SEPARATOR;
 
 		$this->storage = Storage::disk("public");
     }
@@ -49,9 +46,7 @@ class SampleoneRepository extends BaseRepository
             ->select([
                 config('module.sampleones.table').'.id',
                 config('module.sampleones.table').'.first_name',
-				config('module.sampleones.table').'.datethree',
-				config('module.sampleones.table').'.profile_pic',
-				config('module.sampleones.table').'.profile_img',
+				config('module.sampleones.table').'.active',
                 config('module.sampleones.table').'.created_at',
                 config('module.sampleones.table').'.updated_at',
             ]);
@@ -66,14 +61,7 @@ class SampleoneRepository extends BaseRepository
      */
     public function create(array $input)
     {
-        $input['datethree'] = Carbon::parse($input['datethree']);
 
-if(!empty($input['profile_pic'])) {
-            $input['profile_pic'] = $this->uploadFormImg($input['profile_pic']);
-            }
-if(!empty($input['profile_img'])) {
-            $input['profile_img'] = $this->uploadFormImg($input['profile_img']);
-            }
         if (Sampleone::create($input)) {
             return true;
         }
@@ -90,14 +78,7 @@ if(!empty($input['profile_img'])) {
      */
     public function update(Sampleone $sampleone, array $input)
     {
-        $input['datethree'] = Carbon::parse($input['datethree']);
 
-        if(!empty($input['profile_pic'])) {
-              $input['profile_pic'] = $this->uploadFormImg($input['profile_pic']);
-          }
-        if(!empty($input['profile_img'])) {
-            $input['profile_img'] = $this->uploadFormImg($input['profile_img']);
-            }
     	if ($sampleone->update($input))
             return true;
 
@@ -118,5 +99,18 @@ if(!empty($input['profile_img'])) {
         }
 
         throw new GeneralException(trans('exceptions.backend.sampleones.delete_error'));
+    }
+
+
+
+    public function removeImage(Sampleone $sampleone, $field_path, $field)
+    {
+        $path = $this->$field_path;
+        $this->storage->delete($path.$sampleone->$field);
+        $result = $sampleone->update([$field => null]);
+        if ($result) {
+            return true;
+        }
+        throw new GeneralException(trans('exceptions.backend.settings.update_error'));
     }
 }

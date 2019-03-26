@@ -22,19 +22,8 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.samplethrees.table.id') }}</th>
-                            <th>{{ trans('labels.backend.samples.table.first_name') }}</th>
-				<th>{{ trans('labels.backend.samples.table.last_name') }}</th>
-				<th>{{ trans('labels.backend.samples.table.age') }}</th>
-				<th>{{ trans('labels.backend.samples.table.comment') }}</th>
-				<th>{{ trans('labels.backend.samples.table.dropdown') }}</th>
-				<th>{{ trans('labels.backend.samples.table.explaination') }}</th>
-				<th>{{ trans('labels.backend.samples.table.gender') }}</th>
-				<th>{{ trans('labels.backend.samples.table.associated_roles') }}</th>
-				<th>{{ trans('labels.backend.samples.table.dataone') }}</th>
-				<th>{{ trans('labels.backend.samples.table.datetwo') }}</th>
-				<th>{{ trans('labels.backend.samples.table.datethree') }}</th>
-				<th>{{ trans('labels.backend.samples.table.profile_pic') }}</th>
-				<th>{{ trans('labels.backend.samples.table.profile_img') }}</th>
+                            <th>{{ trans('labels.backend.samplethrees.table.first_name') }}</th>
+				<th>{{ trans('labels.backend.samplethrees.table.middle_name') }}</th>
                             <th>{{ trans('labels.backend.samplethrees.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -68,19 +57,8 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.samplethrees.table')}}.id'},
-                    {data: 'first_name', name: '{{config('module.samples.table')}}.first_name'},
-				{data: 'last_name', name: '{{config('module.samples.table')}}.last_name'},
-				{data: 'age', name: '{{config('module.samples.table')}}.age'},
-				{data: 'comment', name: '{{config('module.samples.table')}}.comment'},
-				{data: 'dropdown', name: '{{config('module.samples.table')}}.dropdown'},
-				{data: 'explaination', name: '{{config('module.samples.table')}}.explaination'},
-				{data: 'gender', name: '{{config('module.samples.table')}}.gender'},
-				{data: 'associated_roles', name: '{{config('module.samples.table')}}.associated_roles'},
-				{data: 'dataone', name: '{{config('module.samples.table')}}.dataone'},
-				{data: 'datetwo', name: '{{config('module.samples.table')}}.datetwo'},
-				{data: 'datethree', name: '{{config('module.samples.table')}}.datethree'},
-				{data: 'profile_pic', name: '{{config('module.samples.table')}}.profile_pic'},
-				{data: 'profile_img', name: '{{config('module.samples.table')}}.profile_img'},
+                    {data: 'first_name', name: '{{config('module.samplethrees.table')}}.first_name'},
+				{data: 'middle_name', name: '{{config('module.samplethrees.table')}}.middle_name'},
                     {data: 'created_at', name: '{{config('module.samplethrees.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

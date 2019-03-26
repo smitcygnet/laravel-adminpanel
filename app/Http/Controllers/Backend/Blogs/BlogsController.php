@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Backend\Blogs;
-
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Blogs\ManageBlogsRequest;
 use App\Http\Requests\Backend\Blogs\StoreBlogsRequest;
@@ -14,7 +12,6 @@ use App\Models\BlogCategories\BlogCategory;
 use App\Models\Blogs\Blog;
 use App\Models\BlogTags\BlogTag;
 use App\Repositories\Backend\Blogs\BlogsRepository;
-
 /**
  * Class BlogsController.
  */
@@ -29,12 +26,10 @@ class BlogsController extends Controller
         'InActive'  => 'InActive',
         'Scheduled' => 'Scheduled',
     ];
-
     /**
      * @var BlogsRepository
      */
     protected $blog;
-
     /**
      * @param \App\Repositories\Backend\Blogs\BlogsRepository $blog
      */
@@ -42,7 +37,6 @@ class BlogsController extends Controller
     {
         $this->blog = $blog;
     }
-
     /**
      * @param \App\Http\Requests\Backend\Blogs\ManageBlogsRequest $request
      *
@@ -52,7 +46,6 @@ class BlogsController extends Controller
     {
         return new IndexResponse($this->status);
     }
-
     /**
      * @param \App\Http\Requests\Backend\Blogs\ManageBlogsRequest $request
      *
@@ -62,10 +55,8 @@ class BlogsController extends Controller
     {
         $blogTags = BlogTag::getSelectData();
         $blogCategories = BlogCategory::getSelectData();
-
         return new CreateResponse($this->status, $blogCategories, $blogTags);
     }
-
     /**
      * @param \App\Http\Requests\Backend\Blogs\StoreBlogsRequest $request
      *
@@ -74,10 +65,8 @@ class BlogsController extends Controller
     public function store(StoreBlogsRequest $request)
     {
         $this->blog->create($request->except('_token'));
-
         return new RedirectResponse(route('admin.blogs.index'), ['flash_success' => trans('alerts.backend.blogs.created')]);
     }
-
     /**
      * @param \App\Models\Blogs\Blog                              $blog
      * @param \App\Http\Requests\Backend\Blogs\ManageBlogsRequest $request
@@ -88,10 +77,8 @@ class BlogsController extends Controller
     {
         $blogCategories = BlogCategory::getSelectData();
         $blogTags = BlogTag::getSelectData();
-
         return new EditResponse($blog, $this->status, $blogCategories, $blogTags);
     }
-
     /**
      * @param \App\Models\Blogs\Blog                              $blog
      * @param \App\Http\Requests\Backend\Blogs\UpdateBlogsRequest $request
@@ -101,12 +88,9 @@ class BlogsController extends Controller
     public function update(Blog $blog, UpdateBlogsRequest $request)
     {
         $input = $request->all();
-
         $this->blog->update($blog, $request->except(['_token', '_method']));
-
         return new RedirectResponse(route('admin.blogs.index'), ['flash_success' => trans('alerts.backend.blogs.updated')]);
     }
-
     /**
      * @param \App\Models\Blogs\Blog                              $blog
      * @param \App\Http\Requests\Backend\Blogs\ManageBlogsRequest $request
@@ -116,7 +100,6 @@ class BlogsController extends Controller
     public function destroy(Blog $blog, ManageBlogsRequest $request)
     {
         $this->blog->delete($blog);
-
         return new RedirectResponse(route('admin.blogs.index'), ['flash_success' => trans('alerts.backend.blogs.deleted')]);
     }
 }

@@ -1,0 +1,37 @@
+fieldname,datatype,fieldlabel,value,nullable,unsigned,rule,input_type,options
+Module Name,Sampletemp,,,,,,,
+Directory Name,Sampletemp,,,,,,,
+Model Name,Sampletemp,,,,,,,
+Table Name,sampletemps,,,,,,,
+first_name,string,First Name,,,,required|max:191,textbox,
+last_name,string,Last Name,,,,max:191,textbox,
+amountt,decimal,Second Amount,8--2,,,,textbox,
+level,enum,Level,['easy'--'hard'],,,,textbox,
+age,integer,Age,,,,required|max:191,textbox,
+comment,text,Comment,,,,max:191,textarea,
+dropdown,string,Dropdown,,,,required|max:191,select,['Option1'-'Option2'-'Option3']
+explaination,text,Explaination,,,,required|max:191,textarea,
+gender,string,Gender,,,,required|max:191,select,['Male'-'Female']
+associated_roles,string,Associated Roles,,,,required|max:191,radio,['Administrator'-'Executive'-'User']
+dateone,dateTime,Date One,,,,max:191,datetime,
+datetwo,dateTime,Date Two,,,,required|max:191,datetime,
+datethree,dateTime,Date Three,,,,max:191,datetime,
+profile_pic,string,Profile Picture,,,,,file,
+profile_img,string,Profile Image,,,,,file,
+Module Name,Samplesevennew,,,,,,,
+Directory Name,Samplesevennew,,,,,,,
+Model Name,Samplesevennew,,,,,,,
+Table Name,samplesevennews,,,,,,,
+first_name,string,First Name,,,,required|max:191,textbox,
+last_name,string,Last Name,,,,max:191,textbox,
+age,integer,Age,,,,required|max:191,textbox,
+comment,text,Comment,,,,max:191,textarea,
+dropdown,string,Dropdown,,,,required|max:191,select,['Option1'-'Option2'-'Option3']
+explaination,text,Explaination,,,,required|max:191,textarea,
+gender,string,Gender,,,,required|max:191,select,['Male'-'Female']
+associated_roles,string,Associated Roles,,,,required|max:191,radio,['Administrator'-'Executive'-'User']
+dataone,dateTime,Date One,,,,max:191,datetime,
+datetwo,dateTime,Date Two,,,,required|max:191,datetime,
+datethree,dateTime,Date Three,,,,max:191,datetime,
+profile_pic,string,Profile Picture,,,,,file,
+profile_img,string,Profile Image,,,,,file,

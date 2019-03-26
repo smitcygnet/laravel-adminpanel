@@ -1,19 +1,15 @@
 <?php
-
 namespace App\Http\Controllers\Backend\Blogs;
-
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Blogs\ManageBlogsRequest;
 use App\Repositories\Backend\Blogs\BlogsRepository;
 use Yajra\DataTables\Facades\DataTables;
-
 /**
  * Class BlogsTableController.
  */
 class BlogsTableController extends Controller
 {
     protected $blogs;
-
     /**
      * @param \App\Repositories\Backend\Blogs\BlogsRepository $cmspages
      */
@@ -21,7 +17,6 @@ class BlogsTableController extends Controller
     {
         $this->blogs = $blogs;
     }
-
     /**
      * @param \App\Http\Requests\Backend\Blogs\ManageBlogsRequest $request
      *

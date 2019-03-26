@@ -9,3 +9,4 @@ Route::group(['namespace' => 'Menu'], function () {
     // for Model Forms
     Route::get('menus/get-form/{name?}', 'MenuFormController@create')->name('menus.getform');
 });
+

@@ -113,5 +113,5 @@ class SampletwosController extends Controller
         //returning with successfull message
         return new RedirectResponse(route('admin.sampletwos.index'), ['flash_success' => trans('alerts.backend.sampletwos.deleted')]);
     }
-    
+
 }

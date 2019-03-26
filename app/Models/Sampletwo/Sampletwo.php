@@ -31,11 +31,9 @@ class Sampletwo extends Model
      * @var array
      */
     protected $fillable = [
-            'last_name',
-			'age',
-			'datethree',
-			'profile_pic',
-			'profile_img',
+            'first_name',
+			'active',
+			'confirmed',
     ];
 
     /**

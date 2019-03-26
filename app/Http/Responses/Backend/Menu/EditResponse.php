@@ -12,7 +12,7 @@ class EditResponse implements Responsable
     protected $types;
 
     /**
-     * @var \Libraries\Sdrajput\Generator\Module
+     * @var Bvipul\Generator\Module
      */
     protected $modules;
 
@@ -24,7 +24,7 @@ class EditResponse implements Responsable
     /**
      * @param \App\Models\Menu\Menu    $menu
      * @param array                    $types
-     * @param \Libraries\Sdrajput\Generator\Module $modules
+     * @param Bvipul\Generator\Module $modules
      */
     public function __construct($menu, $types, $modules)
     {

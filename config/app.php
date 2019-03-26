@@ -186,7 +186,6 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
@@ -201,7 +200,8 @@ return [
         App\Providers\HistoryServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
-        Bvipul\Generator\Provider\CrudGeneratorServiceProvider::class,
+     // App\Providers\CrudGeneratorServiceProvider::class,
+
     ],
 
     /*

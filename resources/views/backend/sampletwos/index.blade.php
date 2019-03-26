@@ -22,11 +22,9 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.sampletwos.table.id') }}</th>
-                            <th>{{ trans('labels.backend.sampletwos.table.last_name') }}</th>
-				<th>{{ trans('labels.backend.sampletwos.table.age') }}</th>
-				<th>{{ trans('labels.backend.sampletwos.table.datethree') }}</th>
-				<th>{{ trans('labels.backend.sampletwos.table.profile_pic') }}</th>
-				<th>{{ trans('labels.backend.sampletwos.table.profile_img') }}</th>
+                            <th>{{ trans('labels.backend.sampletwos.table.first_name') }}</th>
+				<th>{{ trans('labels.backend.sampletwos.table.active') }}</th>
+				<th>{{ trans('labels.backend.sampletwos.table.confirmed') }}</th>
                             <th>{{ trans('labels.backend.sampletwos.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -60,11 +58,9 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.sampletwos.table')}}.id'},
-                    {data: 'last_name', name: '{{config('module.sampletwos.table')}}.last_name'},
-				{data: 'age', name: '{{config('module.sampletwos.table')}}.age'},
-				{data: 'datethree', name: '{{config('module.sampletwos.table')}}.datethree'},
-				{data: 'profile_pic', name: '{{config('module.sampletwos.table')}}.profile_pic'},
-				{data: 'profile_img', name: '{{config('module.sampletwos.table')}}.profile_img'},
+                    {data: 'first_name', name: '{{config('module.sampletwos.table')}}.first_name'},
+				{data: 'active', name: '{{config('module.sampletwos.table')}}.active'},
+				{data: 'confirmed', name: '{{config('module.sampletwos.table')}}.confirmed'},
                     {data: 'created_at', name: '{{config('module.sampletwos.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

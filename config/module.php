@@ -93,7 +93,7 @@ return [
 	"table" => "sampletwos",
 	],
 	"samplethrees" => [
-	"table" => "samples",
+	"table" => "samplethrees",
 	],
 	"samplefours" => [
 	"table" => "samplefours",

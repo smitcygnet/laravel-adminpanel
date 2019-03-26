@@ -87,8 +87,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            
-            
+
             var dataTable = $('#users-table').dataTable({
                 processing: true,
                 serverSide: true,
@@ -98,7 +97,6 @@
                     data: {status: 1, trashed: false}
                 },
                 columns: [
-
                     {data: 'first_name', name: '{{config('access.users_table')}}.first_name'},
                     {data: 'last_name', name: '{{config('access.users_table')}}.last_name'},
                     {data: 'email', name: '{{config('access.users_table')}}.email'},

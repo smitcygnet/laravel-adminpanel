@@ -32,9 +32,7 @@ class Sampleone extends Model
      */
     protected $fillable = [
             'first_name',
-			'datethree',
-			'profile_pic',
-			'profile_img',
+			'active',
     ];
 
     /**

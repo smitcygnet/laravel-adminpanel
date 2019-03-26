@@ -99,7 +99,6 @@
                     @lang('datatable.strings')
                 }
             });
-
             Backend.DataTableSearch.init(dataTable);
         });
     </script>
