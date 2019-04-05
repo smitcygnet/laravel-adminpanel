@@ -24,7 +24,7 @@ class Samplethree extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'samples';
+    protected $table = 'samplethrees';
 
     /**
      * Mass Assignable fields of model
@@ -32,18 +32,8 @@ class Samplethree extends Model
      */
     protected $fillable = [
             'first_name',
-			'last_name',
-			'age',
-			'comment',
-			'dropdown',
-			'explaination',
-			'gender',
-			'associated_roles',
-			'dataone',
-			'datetwo',
-			'datethree',
-			'profile_pic',
-			'profile_img',
+			'active',
+			'middle_name',
     ];
 
     /**

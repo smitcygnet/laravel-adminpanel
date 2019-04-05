@@ -46,44 +46,31 @@ class StudentsController extends Controller
     public function index(ManageStudentRequest $request)
     {
 
-        echo "Student List<br>";
-
-        $users = DB::table('students')->get();
-
+        //echo "Student List<br>";
+        //$users = DB::table('students')->get();
         //$users = DB::table('users')->where('first_name','viral')->first();
-
         //$users = DB::table('users')->where('first_name','viral')->first();
-
         //$users = DB::table('users')->value('email');
-        //
         //$users = DB::table('users')->pluck('email');
-
         //$users = DB::table('users')->where('first_name', 'Smith')->pluck('email');
-
         //$users = DB::table('students')->pluck('first_name','last_name');
-
-      /* $students = DB::table('students')->orderBy('id')->chunk(5, function ($students) {
+        /* $students = DB::table('students')->orderBy('id')->chunk(5, function ($students) {
             foreach ($students as $student) {
                echo $student->first_name."---".$student->last_name."<br>";
             }
             //return false
         }); */
-
         // $a = DB::table('students')->where('first_name','John')->exists();
-
         // $students = DB::table('students')->distinct()->get();
-
         /**addSelect Example**/
         //$students = DB::table('students')->select('first_name');
         //$students = $students->addSelect('last_name')->get();
-
         /** Row Expression Example**/
         /*  $students = DB::table('students')
             ->select(DB::raw('count(*) as student_count, first_name, last_name'))
             ->groupBy('first_name')
             ->get();
         */
-
         /** Join Example **/
         /*$students = DB::table('students')
                     ->join('standards','students.standard','=','standards.id')
@@ -95,7 +82,6 @@ class StudentsController extends Controller
                     ->where('students.first_name','=','Jhon')
                     //->andWhere('students.id','>',10)
                     ->get();
-
         echo "<pre/>";print_r($students);exit;
         foreach ($students as $student) {
             print_r($student);

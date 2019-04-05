@@ -16,20 +16,12 @@ require __DIR__.'/Blog_Management.php';
 require __DIR__.'/Faqs.php';
 require __DIR__.'/Menu.php';
 require __DIR__.'/LogViewer.php';
-
 require __DIR__.'/Standard.php';
 require __DIR__.'/Student.php';
-
-require __DIR__.'/Tempone.php';
-require __DIR__.'/Temptwo.php';
-require __DIR__.'/Vision.php';
-require __DIR__.'/Life.php';
+require __DIR__.'/Sample.php';
 require __DIR__.'/Sampleone.php';
 require __DIR__.'/Sampletwo.php';
+require __DIR__.'/Customer.php';
 require __DIR__.'/Samplethree.php';
-require __DIR__.'/Samplefour.php';
 require __DIR__.'/Samplefive.php';
-require __DIR__.'/Samplesix.php';
-require __DIR__.'/Sampleseven.php';
-require __DIR__.'/Sampletemp.php';
-require __DIR__.'/Samplesevennew.php';
+require __DIR__.'/Post.php';

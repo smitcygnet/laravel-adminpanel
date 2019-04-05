@@ -23,9 +23,7 @@
                         <tr>
                             <th>{{ trans('labels.backend.sampleones.table.id') }}</th>
                             <th>{{ trans('labels.backend.sampleones.table.first_name') }}</th>
-				<th>{{ trans('labels.backend.sampleones.table.datethree') }}</th>
-				<th>{{ trans('labels.backend.sampleones.table.profile_pic') }}</th>
-				<th>{{ trans('labels.backend.sampleones.table.profile_img') }}</th>
+				<th>{{ trans('labels.backend.sampleones.table.active') }}</th>
                             <th>{{ trans('labels.backend.sampleones.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -60,9 +58,7 @@
                 columns: [
                     {data: 'id', name: '{{config('module.sampleones.table')}}.id'},
                     {data: 'first_name', name: '{{config('module.sampleones.table')}}.first_name'},
-				{data: 'datethree', name: '{{config('module.sampleones.table')}}.datethree'},
-				{data: 'profile_pic', name: '{{config('module.sampleones.table')}}.profile_pic'},
-				{data: 'profile_img', name: '{{config('module.sampleones.table')}}.profile_img'},
+				{data: 'active', name: '{{config('module.sampleones.table')}}.active'},
                     {data: 'created_at', name: '{{config('module.sampleones.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

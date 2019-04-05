@@ -259,5 +259,10 @@ return [
 	"deleted" => "The Samplesevennew was successfully deleted.",
 	"updated" => "The Samplesevennew was successfully updated.",
 	],
+	"posts" => [
+	"created" => "The Post was successfully created.",
+	"deleted" => "The Post was successfully deleted.",
+	"updated" => "The Post was successfully updated.",
+	],
 	],
 ];

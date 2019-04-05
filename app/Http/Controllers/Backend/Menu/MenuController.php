@@ -15,9 +15,7 @@ use App\Http\Responses\RedirectResponse;
 use App\Http\Responses\ViewResponse;
 use App\Models\Menu\Menu;
 use App\Repositories\Backend\Menu\MenuRepository;
-//use Bvipul\Generator\Module;
-use Libraries\Sdrajput\Generator\Module;
-
+use Bvipul\Generator\Module;
 
 class MenuController extends Controller
 {

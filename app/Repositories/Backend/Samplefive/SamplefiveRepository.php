@@ -22,18 +22,14 @@ class SamplefiveRepository extends BaseRepository
 
     protected $storage;
 
-    protected $profile_pic_path;
 
-    protected $profile_img_path;
 
     /**
      * Constructor.
      */
     public function __construct()
     {
-        $this->profile_pic_path = 'img'.DIRECTORY_SEPARATOR.'samplefives'.DIRECTORY_SEPARATOR.'profile_pic'.DIRECTORY_SEPARATOR;
-
-		$this->profile_img_path = 'img'.DIRECTORY_SEPARATOR.'samplefives'.DIRECTORY_SEPARATOR.'profile_img'.DIRECTORY_SEPARATOR;
+        		
 
 		$this->storage = Storage::disk("public");
     }
@@ -50,18 +46,8 @@ class SamplefiveRepository extends BaseRepository
             ->select([
                 config('module.samplefives.table').'.id',
                 config('module.samplefives.table').'.first_name',
-				config('module.samplefives.table').'.last_name',
-				config('module.samplefives.table').'.age',
-				config('module.samplefives.table').'.comment',
-				config('module.samplefives.table').'.dropdown',
-				config('module.samplefives.table').'.explaination',
-				config('module.samplefives.table').'.gender',
-				config('module.samplefives.table').'.associated_roles',
-				config('module.samplefives.table').'.dataone',
-				config('module.samplefives.table').'.datetwo',
-				config('module.samplefives.table').'.datethree',
-				config('module.samplefives.table').'.profile_pic',
-				config('module.samplefives.table').'.profile_img',
+				config('module.samplefives.table').'.active',
+				config('module.samplefives.table').'.middle_name',
                 config('module.samplefives.table').'.created_at',
                 config('module.samplefives.table').'.updated_at',
             ]);
@@ -76,16 +62,7 @@ class SamplefiveRepository extends BaseRepository
      */
     public function create(array $input)
     {
-        $input['dataone'] = Carbon::parse($input['dataone']);
-$input['datetwo'] = Carbon::parse($input['datetwo']);
-$input['datethree'] = Carbon::parse($input['datethree']);
-
-if(!empty($input['profile_pic'])) {
-            $input['profile_pic'] = $this->uploadFormImg($input['profile_pic'],'profile_pic_path');
-            }
-if(!empty($input['profile_img'])) {
-            $input['profile_img'] = $this->uploadFormImg($input['profile_img'],'profile_img_path');
-            }
+        
         if (Samplefive::create($input)) {
             return true;
         }
@@ -102,16 +79,7 @@ if(!empty($input['profile_img'])) {
      */
     public function update(Samplefive $samplefive, array $input)
     {
-        $input['dataone']   = Carbon::parse($input['dataone']);
-        $input['datetwo']   = Carbon::parse($input['datetwo']);
-        $input['datethree'] = Carbon::parse($input['datethree']);
-
-if(!empty($input['profile_pic'])) {
-            $input['profile_pic'] = $this->uploadFormImg($input['profile_pic'],'profile_pic_path');
-            }
-if(!empty($input['profile_img'])) {
-            $input['profile_img'] = $this->uploadFormImg($input['profile_img'],'profile_img_path');
-            }
+        
     	if ($samplefive->update($input))
             return true;
 
@@ -134,11 +102,16 @@ if(!empty($input['profile_img'])) {
         throw new GeneralException(trans('exceptions.backend.samplefives.delete_error'));
     }
 
-    public function uploadFormImg($image,$field_path)
+    
+
+    public function removeImage(Samplefive $samplefive, $field_path, $field)
     {
         $path = $this->$field_path;
-        $image_name = time().$image->getClientOriginalName();
-        $this->storage->put($path.$image_name, file_get_contents($image->getRealPath()));
-        return $image_name;
+        $this->storage->delete($path.$samplefive->$field);
+        $result = $samplefive->update([$field => null]);
+        if ($result) {
+            return true;
+        }
+        throw new GeneralException(trans('exceptions.backend.settings.update_error'));
     }
 }

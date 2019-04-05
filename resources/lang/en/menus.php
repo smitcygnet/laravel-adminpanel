@@ -54,7 +54,7 @@ return [
 	"main" => "Pages",
 	],
 	"blogs" => [
-	"all" => "All Blog",
+	"all" => "All Blogs",
 	"create" => "Create Blog",
 	"edit" => "Edit Blog",
 	"management" => "Blog Management",
@@ -107,6 +107,7 @@ return [
 	"create" => "Create Module Page",
 	"management" => "Module Management",
 	"main" => "Module Pages",
+	"install" => "Install Modules",
 	],
 	"standards" => [
 	"all" => "All Standards",
@@ -394,6 +395,13 @@ return [
 	"edit" => "Edit Samplesevennew",
 	"management" => "Samplesevennew Management",
 	"main" => "Samplesevennews",
+	],
+	"posts" => [
+	"all" => "All Posts",
+	"create" => "Create Post",
+	"edit" => "Edit Post",
+	"management" => "Post Management",
+	"main" => "Posts",
 	],
 	],
 	"language-picker" => [

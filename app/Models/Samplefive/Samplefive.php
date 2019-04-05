@@ -32,18 +32,8 @@ class Samplefive extends Model
      */
     protected $fillable = [
             'first_name',
-			'last_name',
-			'age',
-			'comment',
-			'dropdown',
-			'explaination',
-			'gender',
-			'associated_roles',
-			'dataone',
-			'datetwo',
-			'datethree',
-			'profile_pic',
-			'profile_img',
+			'active',
+			'middle_name',
     ];
 
     /**

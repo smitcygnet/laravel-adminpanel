@@ -23,18 +23,7 @@
                         <tr>
                             <th>{{ trans('labels.backend.samplefives.table.id') }}</th>
                             <th>{{ trans('labels.backend.samplefives.table.first_name') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.last_name') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.age') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.comment') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.dropdown') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.explaination') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.gender') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.associated_roles') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.dataone') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.datetwo') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.datethree') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.profile_pic') }}</th>
-				<th>{{ trans('labels.backend.samplefives.table.profile_img') }}</th>
+				<th>{{ trans('labels.backend.samplefives.table.middle_name') }}</th>
                             <th>{{ trans('labels.backend.samplefives.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -69,18 +58,7 @@
                 columns: [
                     {data: 'id', name: '{{config('module.samplefives.table')}}.id'},
                     {data: 'first_name', name: '{{config('module.samplefives.table')}}.first_name'},
-				{data: 'last_name', name: '{{config('module.samplefives.table')}}.last_name'},
-				{data: 'age', name: '{{config('module.samplefives.table')}}.age'},
-				{data: 'comment', name: '{{config('module.samplefives.table')}}.comment'},
-				{data: 'dropdown', name: '{{config('module.samplefives.table')}}.dropdown'},
-				{data: 'explaination', name: '{{config('module.samplefives.table')}}.explaination'},
-				{data: 'gender', name: '{{config('module.samplefives.table')}}.gender'},
-				{data: 'associated_roles', name: '{{config('module.samplefives.table')}}.associated_roles'},
-				{data: 'dataone', name: '{{config('module.samplefives.table')}}.dataone'},
-				{data: 'datetwo', name: '{{config('module.samplefives.table')}}.datetwo'},
-				{data: 'datethree', name: '{{config('module.samplefives.table')}}.datethree'},
-				{data: 'profile_pic', name: '{{config('module.samplefives.table')}}.profile_pic'},
-				{data: 'profile_img', name: '{{config('module.samplefives.table')}}.profile_img'},
+				{data: 'middle_name', name: '{{config('module.samplefives.table')}}.middle_name'},
                     {data: 'created_at', name: '{{config('module.samplefives.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
