@@ -1,0 +1,6 @@
+					<label for='DummyLowerVal' class='control control--radio'>
+						<input type='radio' value='DummyLowerVal' name='DummyFieldName' id='DummyLowerVal' class='get-role-for-permissions'
+						{{ @$DummySingularTable->DummyFieldName == 'DummyLowerVal' ? 'checked' : ''  }}
+						/> DummyValue
+						<div class='control__indicator'></div>
+					</label>

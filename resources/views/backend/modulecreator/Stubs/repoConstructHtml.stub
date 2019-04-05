@@ -1,0 +1,1 @@
+$this->DummyFieldNameLowerCase_path = 'img'.DIRECTORY_SEPARATOR.'DummyTableName'.DIRECTORY_SEPARATOR.'DummyFieldNameLowerCase'.DIRECTORY_SEPARATOR;

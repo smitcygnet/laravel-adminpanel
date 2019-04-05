@@ -1,0 +1,1 @@
+<th>{{ trans('labels.backend.DummyModuleName.table.DummyFieldNameLowerCase') }}</th>

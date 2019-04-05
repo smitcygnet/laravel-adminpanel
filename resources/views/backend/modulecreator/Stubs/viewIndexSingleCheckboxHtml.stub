@@ -1,0 +1,10 @@
+	<div class="control-group">
+        <label class="control control--checkbox">
+        	 @if(isset($DummySingularTable->DummyFieldName))
+               {{ Form::checkbox('DummyFieldName', '1', $DummySingularTable->DummyFieldName == 1 ) }}
+             @else
+        	   {{ Form::checkbox('DummyFieldName', '1') }}
+			@endif
+        <div class="control__indicator"></div>
+        </label>
+    </div>

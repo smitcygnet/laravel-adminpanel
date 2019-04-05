@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Models\Customer;
+namespace App\Models\Sampletwo;
 
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Customer\Traits\CustomerAttribute;
-use App\Models\Customer\Traits\CustomerRelationship;
+use App\Models\Sampletwo\Traits\SampletwoAttribute;
+use App\Models\Sampletwo\Traits\SampletwoRelationship;
 
-class Customer extends Model
+class Sampletwo extends Model
 {
     use ModelTrait,
-        CustomerAttribute,
-    	CustomerRelationship {
-            // CustomerAttribute::getEditButtonAttribute insteadof ModelTrait;
+        SampletwoAttribute,
+    	SampletwoRelationship {
+            // SampletwoAttribute::getEditButtonAttribute insteadof ModelTrait;
         }
 
     /**
@@ -24,7 +24,7 @@ class Customer extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'customers';
+    protected $table = 'sampletwos';
 
     /**
      * Mass Assignable fields of model
@@ -33,7 +33,7 @@ class Customer extends Model
     protected $fillable = [
             'first_name',
 			'active',
-			'last_name',
+			'confirmed',
     ];
 
     /**

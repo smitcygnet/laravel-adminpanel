@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Sample\Traits;
+namespace AttributeNamespace;
 
 /**
- * Class SampleAttribute.
+ * Class AttributeClass.
  */
-trait SampleAttribute
+trait AttributeClass
 {
     // Make your attributes functions here
     // Further, see the documentation : https://laravel.com/docs/5.4/eloquent-mutators#defining-an-accessor
@@ -18,8 +18,8 @@ trait SampleAttribute
     public function getActionButtonsAttribute()
     {
         return '<div class="btn-group action-btn">
-                '.$this->getEditButtonAttribute("edit-sample", "admin.samples.edit").'
-                '.$this->getDeleteButtonAttribute("delete-sample", "admin.samples.destroy").'
+                '.$this->getEditButtonAttribute("editPermission", "editRoute").'
+                '.$this->getDeleteButtonAttribute("deletePermission", "deleteRoute").'
                 </div>';
     }
 }

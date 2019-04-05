@@ -372,6 +372,7 @@ return [
 	"not_found" => "That Blog does not exist.",
 	"update_error" => "There was a problem updating this Blog. Please try again.",
 	],
+<<<<<<< HEAD
 	"posts" => [
 	"already_exists" => "That Post already exists. Please choose a different name.",
 	"create_error" => "There was a problem creating this Post. Please try again.",
@@ -379,6 +380,8 @@ return [
 	"not_found" => "That Post does not exist.",
 	"update_error" => "There was a problem updating this Post. Please try again.",
 	],
+=======
+>>>>>>> 99aeea5537f874ef087a06df02967b01ae00c452
 	],
 	"frontend" => [
 	"auth" => [

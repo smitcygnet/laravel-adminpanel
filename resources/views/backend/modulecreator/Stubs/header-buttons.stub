@@ -1,5 +1,5 @@
 <!--Action Button-->
-@if( Active::checkUriPattern( 'admin/samples' ) )
+@if( Active::checkUriPattern( 'admin/dummy_small_plural_model' ) )
     <div class="btn-group">
         <button type="button" class="btn btn-warning btn-flat dropdown-toggle" data-toggle="dropdown">Export
             <span class="caret"></span>
@@ -22,17 +22,17 @@
     </button>
     <ul class="dropdown-menu" role="menu">
         <li>
-            <a href="{{ route( 'admin.samples.index' ) }}">
-                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.samples.all' ) }}
+            <a href="{{ route( 'admin.dummy_small_plural_model.index' ) }}">
+                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.dummy_small_plural_model.all' ) }}
             </a>
         </li>
-        @permission( 'create-sample' )
+        @create@permission( 'create-dummy_small_model' )
             <li>
-                <a href="{{ route( 'admin.samples.create' ) }}">
-                    <i class="fa fa-plus"></i> {{ trans( 'menus.backend.samples.create' ) }}
+                <a href="{{ route( 'admin.dummy_small_plural_model.create' ) }}">
+                    <i class="fa fa-plus"></i> {{ trans( 'menus.backend.dummy_small_plural_model.create' ) }}
                 </a>
             </li>
-        @endauth
+        @endauth@endCreate
     </ul>
 </div>
 <div class="clearfix"></div>

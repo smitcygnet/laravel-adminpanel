@@ -143,10 +143,13 @@ return [
 	"first_name" => "First Name",
 	"lavel" => "Lavel",
 	"last_name" => "Last Name",
+<<<<<<< HEAD
 	"title" => "Title",
 	"publish" => "Published at",
 	"status" => "Status",
 	"createdby" => "Created By",
+=======
+>>>>>>> 99aeea5537f874ef087a06df02967b01ae00c452
 	],
 	"first_name" => "First Name",
 	"lavel" => "Lavel",
@@ -368,6 +371,7 @@ return [
 	"first_name" => "First Name",
 	"active" => "Active",
 	"middle_name" => "Middle Name",
+<<<<<<< HEAD
 	],
 	"first_name" => "First Name",
 	"active" => "Active",
@@ -387,6 +391,12 @@ return [
 	],
 	"name" => "Name",
 	"comment" => "Content",
+=======
+	],
+	"first_name" => "First Name",
+	"active" => "Active",
+	"middle_name" => "Middle Name",
+>>>>>>> 99aeea5537f874ef087a06df02967b01ae00c452
 	],
 	],
 	"frontend" => [
